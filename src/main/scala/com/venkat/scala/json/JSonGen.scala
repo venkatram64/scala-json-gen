@@ -73,8 +73,8 @@ object JSonGen{
   private val CHAR_LIST = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
   private val RANDOM_STRING_LENGTH = 10
   private val CLASSIFICATION = Array[String]("Differentiated Data", "Industry Data", "Market Data", "Research,Publications/Newsletters", "Other")
-  private val TESSERA_REVIEW_TYPE = Array[String]("Samples", "Trial/POC", "Subscription", "Other")
-  private val TESSERA_REQ_GROUP = Array[String]("DSS", "Aperio")
+  private val EMP_REVIEW_TYPE = Array[String]("Samples", "Trial/POC", "Subscription", "Other")
+  private val EMP_REQ_GROUP = Array[String]("XYZ", "Mario")
   private val DOMAIN_GROUPS = Array[String](".com", ".org", ".net")
   private val DATE_RANGE = Array[Integer](10, 20, 30, 40, 50, 60, 70, 80, 90, -10, -20, -30, -40, -50, -60, -70, -80, -90)
 
@@ -114,9 +114,9 @@ object JSonGen{
       request.setEmpProductClassification(CLASSIFICATION(getRandomNumber(6)))
       request.setEmpProductSubClassification(generateRandomString)
 
-      request.setEmpReviewType(TESSERA_REVIEW_TYPE(getRandomNumber(5)))
+      request.setEmpReviewType(EMP_REVIEW_TYPE(getRandomNumber(5)))
 
-      request.setEmpRequestingGroup(TESSERA_REQ_GROUP(getRandomNumber(3)))
+      request.setEmpRequestingGroup(EMP_REQ_GROUP(getRandomNumber(3)))
 
       request.setQuestionnaireUrl("http://" + generateRandomString + DOMAIN_GROUPS(getRandomNumber(4)))
 
